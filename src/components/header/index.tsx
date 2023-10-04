@@ -27,89 +27,45 @@ export function Header() {
 
     btnMobile?.addEventListener('click', toggleMenu);
 
-    function scrollToTarget(target: string) {
-      const targetElement = document.getElementById(target);
-      if (!targetElement) return;
-      const headerHeight =
-        (document.querySelector('header') as HTMLElement)?.offsetHeight || 0;
-      const targetOffset = targetElement.offsetTop - headerHeight;
-      window.scrollTo({ top: targetOffset, behavior: 'smooth' });
-      if (nav) nav.classList.remove('active');
+    function addLinkClickEvent(linkId: string, target: string) {
+      const link = document.getElementById(linkId);
+      link?.addEventListener('click', (event) => {
+        event.preventDefault();
+        navigate(target);
+        if (nav) nav.classList.remove('active');
+        setSubmenuOpen(false);
+      });
     }
 
-    const navLinks = document.querySelectorAll('#menu a');
+    const menuLinks = [
+      { id: 'home-link', target: '/' },
+      { id: 'sobre-link', target: '/sobre-nos' },
+      { id: 'contato-link', target: '/contato' },
+      { id: 'salgados-assados-link', target: '/salgadosAssados' },
+      { id: 'salgados-fritos-link', target: '/salgadosFritos' },
+      { id: 'salgados-folhados-link', target: '/salgadosFolhados' },
+      { id: 'doces-tradicionais-link', target: '/docesTradicionais' },
+      { id: 'doces-finos-link', target: '/docesFinos' },
+      { id: 'doces-especiais-link', target: '/docesEspeciais' },
+      { id: 'bolos-personalizados-link', target: '/boloPersonalizado' },
+      { id: 'bolos-vucao-link', target: '/boloVulcão' },
+      { id: 'bolos-piscina-link', target: '/boloPiscina' },
+      { id: 'torta-doce-link', target: '/tortaDoce' },
+      { id: 'torta-salgada-link', target: '/tortaSalgada' },
+    ];
 
-    navLinks.forEach((link) => {
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const target = (event.target as HTMLElement).getAttribute('href');
-        if (target) scrollToTarget(target);
-      });
-    });
-
-    const homeLink = document.getElementById('home-link');
-    const sobreLink = document.getElementById('sobre-link');
-    const contatoLink = document.getElementById('contato-link');
-    const salgadosAssadosLink = document.getElementById(
-      'salgados-assados-link',
-    );
-    const salgadosFritosLink = document.getElementById('salgados-fritos-link');
-    const salgadosFolhadosLink = document.getElementById(
-      'salgados-folhados-link',
-    );
-    const docesTradicionaisLink = document.getElementById(
-      'salgados-tradicionais-link',
-    );
-    const docesFinosLink = document.getElementById('doces-finos-link');
-    const docesEspeciaisLink = document.getElementById('doces-especiais-link');
-    const bolosPersonalizadosLink = document.getElementById(
-      'bolos-personalizados-link',
-    );
-    const bolosVucaoLink = document.getElementById('bolos-vucao-link');
-    const bolosPiscinaLink = document.getElementById('bolos-piscina-link');
-    const tortaDoceLink = document.getElementById('torta-doce-link');
-    const tortaSalgadaLink = document.getElementById('torta-salgada-link');
-
-    homeLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-    });
-
-    sobreLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-    });
-
-    contatoLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-    });
-
-    salgadosAssadosLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-      setSubmenuOpen(false);
-    });
-
-    salgadosFritosLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-      setSubmenuOpen(false);
-    });
-
-    salgadosFolhadosLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-      setSubmenuOpen(false);
-    });
-
-    docesTradicionaisLink?.addEventListener('click', () => {
-      if (nav) nav.classList.remove('active');
-      setSubmenuOpen(false);
+    menuLinks.forEach((link) => {
+      addLinkClickEvent(link.id, link.target);
     });
 
     return () => {
       btnMobile?.removeEventListener('click', toggleMenu);
-
-      navLinks.forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          const target = (event.target as HTMLElement).getAttribute('href');
-          if (target) scrollToTarget(target);
+      menuLinks.forEach((link) => {
+        const linkElement = document.getElementById(link.id);
+        linkElement?.removeEventListener('click', () => {
+          navigate(link.target);
+          if (nav) nav.classList.remove('active');
+          setSubmenuOpen(false);
         });
       });
     };
@@ -140,24 +96,12 @@ export function Header() {
             </button>
             <ul id="menu" role="menu">
               <li>
-                <a
-                  id="home-link"
-                  onClick={() => {
-                    navigate('/');
-                  }}
-                  className="container-link"
-                >
+                <a id="home-link" className="container-link">
                   Início
                 </a>
               </li>
               <li>
-                <a
-                  id="sobre-link"
-                  onClick={() => {
-                    navigate('/sobre-nos');
-                  }}
-                  className="container-link"
-                >
+                <a id="sobre-link" className="container-link">
                   Sobre Nós
                 </a>
               </li>
@@ -176,125 +120,42 @@ export function Header() {
                 </a>
                 <ul className={submenuOpen ? 'submenu-open' : 'submenu-closed'}>
                   <li>
-                    <a
-                      id="salgados-assados-link"
-                      onClick={() => {
-                        navigate('/salgadosAssados');
-                      }}
-                    >
-                      Salgados Assados
-                    </a>
+                    <a id="salgados-assados-link">Salgados Assados</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/salgadosFritos');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Salgados Fritos
-                    </a>
+                    <a id="salgados-fritos-link">Salgados Fritos</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/salgadosFolhados');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Salgados Folhados
-                    </a>
+                    <a id="salgados-folhados-link">Salgados Folhados</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/docesTradicionais');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Doces Tradicionais
-                    </a>
+                    <a id="doces-tradicionais-link">Doces Tradicionais</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/docesFinos');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Doces Finos
-                    </a>
+                    <a id="doces-finos-link">Doces Finos</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/docesEspeciais');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Doces Especiais
-                    </a>
+                    <a id="doces-especiais-link">Doces Especiais</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/boloPersonalizado');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Bolo Personalizado
-                    </a>
+                    <a id="bolos-personalizados-link">Bolo Personalizado</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/boloVulcão');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Bolo Vulcão
-                    </a>
+                    <a id="bolos-vucao-link">Bolo Vulcão</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/boloPiscina');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Bolo Piscina
-                    </a>
+                    <a id="bolos-piscina-link">Bolo Piscina</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/tortaDoce');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Torta Doce
-                    </a>
+                    <a id="torta-doce-link">Torta Doce</a>
                   </li>
                   <li>
-                    <a
-                      onClick={() => {
-                        navigate('/tortaSalgada');
-                        handleSubmenuItemClicked();
-                      }}
-                    >
-                      Torta Salgada
-                    </a>
+                    <a id="torta-salgada-link">Torta Salgada</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a
-                  id="contato-link"
-                  onClick={() => {
-                    navigate('/contato');
-                  }}
-                  className="container-link"
-                >
+                <a id="contato-link" className="container-link">
                   Contato
                 </a>
               </li>
