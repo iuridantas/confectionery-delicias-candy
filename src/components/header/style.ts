@@ -62,6 +62,8 @@ export const Container = styled.div`
   .submenu-open a {
     display: block;
     padding: 5px 0;
+    color: #ffffff;
+    text-decoration: none;
   }
 
   .submenu-open a:hover {

@@ -1,7 +1,7 @@
 import { Container } from './style';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiFillCaretDown } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export function Header() {
   const navigate = useNavigate();
@@ -52,6 +52,7 @@ export function Header() {
       { id: 'bolos-piscina-link', target: '/boloPiscina' },
       { id: 'torta-doce-link', target: '/tortaDoce' },
       { id: 'torta-salgada-link', target: '/tortaSalgada' },
+      { id: 'cupcakes-link', target: '/cupcakes' },
     ];
 
     menuLinks.forEach((link) => {
@@ -96,14 +97,18 @@ export function Header() {
             </button>
             <ul id="menu" role="menu">
               <li>
-                <a id="home-link" className="container-link">
+                <Link to="/" id="home-link" className="container-link">
                   Início
-                </a>
+                </Link>
               </li>
               <li>
-                <a id="sobre-link" className="container-link">
+                <Link
+                  to="/sobre-nos"
+                  id="sobre-link"
+                  className="container-link"
+                >
                   Sobre Nós
-                </a>
+                </Link>
               </li>
               <li
                 onMouseEnter={() => setSubmenuOpen(true)}
@@ -120,44 +125,78 @@ export function Header() {
                 </a>
                 <ul className={submenuOpen ? 'submenu-open' : 'submenu-closed'}>
                   <li>
-                    <a id="salgados-assados-link">Salgados Assados</a>
+                    <Link to="/salgadosAssados" id="salgados-assados-link">
+                      Salgados Assados
+                    </Link>
                   </li>
                   <li>
-                    <a id="salgados-fritos-link">Salgados Fritos</a>
+                    <Link to="/salgadosFritos" id="salgados-fritos-link">
+                      Salgados Fritos
+                    </Link>
                   </li>
                   <li>
-                    <a id="salgados-folhados-link">Salgados Folhados</a>
+                    <Link to="/salgadosFolhados" id="salgados-folhados-link">
+                      Salgados Folhados
+                    </Link>
                   </li>
                   <li>
-                    <a id="doces-tradicionais-link">Doces Tradicionais</a>
+                    <Link to="/docesTradicionais" id="doces-tradicionais-link">
+                      Doces Tradicionais
+                    </Link>
                   </li>
                   <li>
-                    <a id="doces-finos-link">Doces Finos</a>
+                    <Link to="/docesFinos" id="doces-finos-link">
+                      Doces Finos
+                    </Link>
                   </li>
                   <li>
-                    <a id="doces-especiais-link">Doces Especiais</a>
+                    <Link to="/docesEspeciais" id="doces-especiais-link">
+                      Doces Especiais
+                    </Link>
                   </li>
                   <li>
-                    <a id="bolos-personalizados-link">Bolo Personalizado</a>
+                    <Link
+                      to="/boloPersonalizado"
+                      id="bolos-personalizados-link"
+                    >
+                      Bolo Personalizado
+                    </Link>
                   </li>
                   <li>
-                    <a id="bolos-vucao-link">Bolo Vulcão</a>
+                    <Link to="/boloVulcão" id="bolos-vucao-link">
+                      Bolo Vulcão
+                    </Link>
                   </li>
                   <li>
-                    <a id="bolos-piscina-link">Bolo Piscina</a>
+                    <Link to="/boloPiscina" id="bolos-piscina-link">
+                      Bolo Piscina
+                    </Link>
                   </li>
                   <li>
-                    <a id="torta-doce-link">Torta Doce</a>
+                    <Link to="/tortaDoce" id="torta-doce-link">
+                      Torta Doce
+                    </Link>
                   </li>
                   <li>
-                    <a id="torta-salgada-link">Torta Salgada</a>
+                    <Link to="/tortaSalgada" id="torta-salgada-link">
+                      Torta Salgada
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/cupcakes" id="cupcakes-link">
+                      Cupcakes
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a id="contato-link" className="container-link">
+                <Link
+                  to="/contato"
+                  id="contato-link"
+                  className="container-link"
+                >
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
