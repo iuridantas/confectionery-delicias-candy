@@ -18,8 +18,6 @@ export default createGlobalStyle`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f2737a82;
-  color: #ffffff;
 }
 `;
 
