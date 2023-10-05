@@ -43,7 +43,7 @@ export const Container = styled.div`
   }
 
   .container-link:hover {
-    color: #000000;
+    color: #e36369;
     text-decoration: underline;
   }
 
@@ -67,7 +67,7 @@ export const Container = styled.div`
   }
 
   .submenu-open a:hover {
-    color: #000000;
+    color: #e36369;
     text-decoration: underline;
   }
 
@@ -130,6 +130,13 @@ export const Container = styled.div`
     .submenu-open a {
       display: block;
       padding: 5px 10px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 900px) {
+    .submenu-open a {
+      display: block;
+
     }
   }
 `;

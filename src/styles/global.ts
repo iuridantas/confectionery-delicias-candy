@@ -18,6 +18,7 @@ export default createGlobalStyle`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url('/img/fundo.png');
 }
 `;
 

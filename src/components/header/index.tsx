@@ -48,7 +48,7 @@ export function Header() {
       { id: 'doces-finos-link', target: '/docesFinos' },
       { id: 'doces-especiais-link', target: '/docesEspeciais' },
       { id: 'bolos-personalizados-link', target: '/boloPersonalizado' },
-      { id: 'bolos-vucao-link', target: '/boloVulcão' },
+      { id: 'bolos-vulcao-link', target: '/boloVulcao' },
       { id: 'bolos-piscina-link', target: '/boloPiscina' },
       { id: 'torta-doce-link', target: '/tortaDoce' },
       { id: 'torta-salgada-link', target: '/tortaSalgada' },
@@ -125,28 +125,26 @@ export function Header() {
                 </a>
                 <ul className={submenuOpen ? 'submenu-open' : 'submenu-closed'}>
                   <li>
-                    <Link to="/salgadosAssados" id="salgados-assados-link">
-                      Salgados Assados
+                    <Link to="/bolosPiscina" id="bolos-piscina-link">
+                      Bolo Piscina
                     </Link>
                   </li>
                   <li>
-                    <Link to="/salgadosFritos" id="salgados-fritos-link">
-                      Salgados Fritos
+                    <Link
+                      to="/bolosPersonalizados"
+                      id="bolos-personalizados-link"
+                    >
+                      Bolo Personalizado
                     </Link>
                   </li>
                   <li>
-                    <Link to="/salgadosFolhados" id="salgados-folhados-link">
-                      Salgados Folhados
+                    <Link to="/bolosVulcao" id="bolos-vulcao-link">
+                      Bolo Vulcão
                     </Link>
                   </li>
                   <li>
-                    <Link to="/docesTradicionais" id="doces-tradicionais-link">
-                      Doces Tradicionais
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/docesFinos" id="doces-finos-link">
-                      Doces Finos
+                    <Link to="/cupcakes" id="cupcakes-link">
+                      Cupcakes
                     </Link>
                   </li>
                   <li>
@@ -155,21 +153,28 @@ export function Header() {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      to="/boloPersonalizado"
-                      id="bolos-personalizados-link"
-                    >
-                      Bolo Personalizado
+                    <Link to="/docesFinos" id="doces-finos-link">
+                      Doces Finos
                     </Link>
                   </li>
                   <li>
-                    <Link to="/boloVulcão" id="bolos-vucao-link">
-                      Bolo Vulcão
+                    <Link to="/docesTradicionais" id="doces-tradicionais-link">
+                      Doces Tradicionais
                     </Link>
                   </li>
                   <li>
-                    <Link to="/boloPiscina" id="bolos-piscina-link">
-                      Bolo Piscina
+                    <Link to="/salgadosAssados" id="salgados-assados-link">
+                      Salgados Assados
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/salgadosFolhados" id="salgados-folhados-link">
+                      Salgados Folhados
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/salgadosFritos" id="salgados-fritos-link">
+                      Salgados Fritos
                     </Link>
                   </li>
                   <li>
@@ -180,11 +185,6 @@ export function Header() {
                   <li>
                     <Link to="/tortaSalgada" id="torta-salgada-link">
                       Torta Salgada
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/cupcakes" id="cupcakes-link">
-                      Cupcakes
                     </Link>
                   </li>
                 </ul>
