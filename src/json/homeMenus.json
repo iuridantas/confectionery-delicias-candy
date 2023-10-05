@@ -8,73 +8,73 @@
   {
     "id": 2,
     "name": "Bolo Personalizado",
-    "photo": "img/banner.jpg",
+    "photo": "img/boloPersonalizado.png",
     "url": "/boloPersonalizado"
   },
   {
     "id": 3,
     "name": "Bolo Vulcão",
-    "photo": "img/banner.jpg",
+    "photo": "img/boloVulcao.png",
     "url": "/boloVulcao"
   },
   {
     "id": 4,
     "name": "Cupcakes",
-    "photo": "img/banner.jpg",
+    "photo": "img/cupcakes.png",
     "url": "/cupcakes"
   },
   {
     "id": 5,
     "name": "Doces Especiais",
-    "photo": "img/banner.jpg",
+    "photo": "img/docesEspeciais.png",
     "url": "/docesEspeciais"
   },
   {
     "id": 6,
     "name": "Doces Finos",
-    "photo": "img/banner.jpg",
+    "photo": "img/docesFinos.png",
     "url": "/docesFinos"
   },
   {
     "id": 7,
     "name": "Doces Tradicionais",
-    "photo": "img/banner.jpg",
+    "photo": "img/docesTradicionais.png",
     "url": "/docesTradicionais"
   },
   {
     "id": 8,
     "name": "Salgados Assados",
-    "photo": "img/banner.jpg",
+    "photo": "img/salgadosAssados.png",
     "url": "/salgadosAssados"
   },
   {
     "id": 9,
     "name": "Salgados Folhados",
-    "photo": "img/banner.jpg",
+    "photo": "img/salgadosFolhados.png",
     "url": "/salgadosFolhados"
   },
   {
     "id": 10,
     "name": "Salgados Fritos",
-    "photo": "img/banner.jpg",
+    "photo": "img/salgadosFritos.png",
     "url": "/salgadosFritos"
   },
   {
     "id": 11,
     "name": "Sobremesas",
-    "photo": "img/banner.jpg",
+    "photo": "img/sobremesas.png",
     "url": "/sobremesas"
   },
   {
     "id": 12,
     "name": "Torta Doce",
-    "photo": "img/banner.jpg",
+    "photo": "img/tortaDoce.png",
     "url": "/tortaDoce"
   },
   {
     "id": 13,
     "name": "Torta Salgada",
-    "photo": "img/banner.jpg",
+    "photo": "img/tortaSalgada.png",
     "url": "/tortaSalgada"
   }
 ]

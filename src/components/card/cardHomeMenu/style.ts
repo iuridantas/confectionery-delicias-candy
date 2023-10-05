@@ -3,25 +3,34 @@ import styled from 'styled-components';
 export const CardSession = styled.div`
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 2px 2px #ef1d2a;
   margin: 20px 0;
-  transition: all 0.3s ease;
-  width: 320px;
+  transform: translate(0px, 0px);
+  transition: all 0.3s ease-in-out;
+  width: 310px;
+
+  &:hover {
+    box-shadow: 0px 3px 3px #000000;
+    transform: translate(0px, -5px);
+  }
 
   img {
+    width: 200px;
+    height: 200px;
     margin: 10px auto;
-    border-radius: 10px;
+    border-radius: 5px;
   }
 
   a {
-    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     color: #000000;
     text-decoration: none;
     cursor: pointer;
   }
 
   h2 {
-    font-size: 24px !important;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -29,13 +38,8 @@ export const CardSession = styled.div`
     margin: 20px auto;
     width: 90%;
 
-    img {
-      width: 250px;
-      height: 250px;
-    }
-
     h2 {
-      font-size: 18px !important;
+      font-size: 20px;
     }
   }
 `;

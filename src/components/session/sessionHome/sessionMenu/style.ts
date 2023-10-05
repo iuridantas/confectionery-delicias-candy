@@ -10,4 +10,17 @@ export const HomeMenuSession = styled.div`
     justify-content: center;
     gap: 20px;
   }
+
+  h1 {
+    font-size: 32px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 22px;
+      margin: auto;
+    }
+  }
 `;
