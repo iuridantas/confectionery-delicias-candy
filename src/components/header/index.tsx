@@ -53,8 +53,8 @@ export function Header() {
       { id: 'torta-doce-link', target: '/tortaDoce' },
       { id: 'torta-salgada-link', target: '/tortaSalgada' },
       { id: 'cupcakes-link', target: '/cupcakes' },
+      { id: 'sobremesas-link', target: '/sobremesas' },
     ];
-
     menuLinks.forEach((link) => {
       addLinkClickEvent(link.id, link.target);
     });
@@ -175,6 +175,11 @@ export function Header() {
                   <li>
                     <Link to="/salgadosFritos" id="salgados-fritos-link">
                       Salgados Fritos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/sobremesas" id="sobremesas-link">
+                      Sobremesas
                     </Link>
                   </li>
                   <li>
