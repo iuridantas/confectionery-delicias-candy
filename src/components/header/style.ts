@@ -57,6 +57,7 @@ export const Container = styled.div`
     border-radius: 8px;
     background: linear-gradient(to bottom, #efa193, #eebea3);
     padding: 10px;
+    z-index: 1;
   }
 
   .submenu-open a {
