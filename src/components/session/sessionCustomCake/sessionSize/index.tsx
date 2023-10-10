@@ -16,9 +16,14 @@ export function SessionSize({
   return (
     <SizeSession>
       <h2>Tamanho:</h2>
+      <p>
+        <strong>Observação:</strong> Caso deseje que o bolo tenha um topo
+        decorado com flores ou outros detalhes especiais, por favor, informe-nos
+        quando entrar em contato, pois haverá um acréscimo no valor.
+      </p>
       <form>
         <label>
-          Mini (12cm de Diâmetro - 8 fatias)
+          Mini (12cm de Diâmetro - 8 fatias) - R$ 70,00.
           <input
             type="radio"
             name="size"
@@ -28,7 +33,7 @@ export function SessionSize({
           />
         </label>
         <label>
-          PP (15cm de Diâmetro - 10 a 12 fatias)
+          PP (15cm de Diâmetro - 10 a 12 fatias) - R$ 130,00.
           <input
             type="radio"
             name="size"
@@ -38,7 +43,7 @@ export function SessionSize({
           />
         </label>
         <label>
-          P (20cm de Diâmetro - 20 a 25 fatias)
+          P (20cm de Diâmetro - 20 a 25 fatias) - R$ 170,00.
           <input
             type="radio"
             name="size"
@@ -48,7 +53,7 @@ export function SessionSize({
           />
         </label>
         <label>
-          M (25cm de Diâmetro - 30 a 40 fatias)
+          M (25cm de Diâmetro - 30 a 40 fatias) - R$ 220,00.
           <input
             type="radio"
             name="size"
@@ -58,7 +63,7 @@ export function SessionSize({
           />
         </label>
         <label>
-          G (30cm de Diâmetro - 50 a 60 fatias)
+          G (30cm de Diâmetro - 50 a 60 fatias) - R$ 320,00.
           <input
             type="radio"
             name="size"

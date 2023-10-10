@@ -16,9 +16,13 @@ export function SessionDough({
   return (
     <DoughSession>
       <h2>Escolha a massa desejada para o bolo:</h2>
+      <p>
+        <strong>Observação:</strong> Para a massa do bolo Red Velvet, haverá um
+        acréscimo de R$15,00.
+      </p>
       <form>
         <label>
-          Massa de Chocolate (Cacau 100% e Cacau Black)
+          Chocolate (Cacau 100% e Cacau Black)
           <input
             type="radio"
             name="dough"
@@ -28,7 +32,7 @@ export function SessionDough({
           />
         </label>
         <label>
-          Massa Branca (Neutra Comum)
+          Branca (Neutra Comum)
           <input
             type="radio"
             name="dough"
@@ -38,7 +42,7 @@ export function SessionDough({
           />
         </label>
         <label>
-          Massa Mista (Metade Chocolate, Metade Branca)
+          Mista (Metade Chocolate, Metade Branca)
           <input
             type="radio"
             name="dough"

@@ -55,9 +55,14 @@ export function SessionFilling({
   return (
     <FillingSession>
       <h2>Escolha até duas opções de sabores para o recheio:</h2>
+      <p>
+        <strong>Observação:</strong> Para bolos de 12 e 15cm, há um acréscimo de
+        R$15,00 ao escolher recheio especial, enquanto para bolos de 20, 25 e
+        30cm, o acréscimo será de R$20,00.
+      </p>
       <div className="column">
         <div className="filling">
-          <h3>Especial</h3>
+          <h2 className="center">Especial</h2>
           <form>
             <label>
               Leite Ninho com Nutella
@@ -170,7 +175,7 @@ export function SessionFilling({
           </form>
         </div>
         <div className="filling">
-          <h3>Simples</h3>
+          <h2 className="center">Simples</h2>
           <form>
             <label>
               Brigadeiro
